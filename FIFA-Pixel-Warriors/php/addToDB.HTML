@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add plyer</title>
+</head>
+<body>
+    <form action="./crut.php" method="POST">
+        <div class="FLname">
+            <input type="text" name="Fname" placeholder="First name" require>
+            <input type="text" name="Lname" placeholder="Laste name" require>
+            <input type="text" name="photo" placeholder="plyer's photo" require>
+        </div>
+
+        <div>
+            <input type="number" name="totalEnerge" placeholder="raing" required>
+            <select name="position">
+                <option value="Gk">Gk</option>
+                <!-- di -->
+                <option value="CB">CB</option>
+                <option value="RB">RB</option>
+                <option value="LB">LB</option>
+                <!-- ml -->
+                <option value="CM">CM</option>
+                <!-- cAttack -->
+                <option value="LW">LW</option>
+                <option value="ST">ST</option>
+                <option value="RW">RW</option>
+            </select>
+
+        </div>
+
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

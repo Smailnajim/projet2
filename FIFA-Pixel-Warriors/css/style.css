@@ -1,0 +1,493 @@
+:root {
+    --varGoUp: 0;
+    --varReste: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+}
+
+@media (max-width: 600px){
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    .Left {
+        width: 100%;
+    }
+    .field {
+        background-repeat: no-repeat;
+        background-image: url('../bazare/stadium_background.webp');
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        visibility: visible;
+    }
+}
+
+body {
+    width: 100%;
+    height: 100dvh;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Left {
+    width: 5%;
+}
+
+.goField{
+    margin-top: 30%;
+    width: 90%;
+    padding: 8%;
+    border-bottom: solid white;
+    border-top: solid white;
+    text-align: center;
+}
+
+.AllPlyer {
+    width: 90%;
+    padding: 8%;
+    border-bottom: solid white;
+    text-align: center;
+
+}
+
+.AllPlyer:hover, .goField:hover {
+    cursor: grabbing;
+    color: rgb(244, 244, 219);
+}
+
+.field {
+    visibility: visible;
+}
+
+.field {
+    width: 62%;
+    height: 100dvh;
+    background-repeat: no-repeat;
+    background-image: url('../bazare/stadium_background.webp');
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    visibility: visible;
+}
+
+#Defense-L, #Defense-R{
+    transform: translateY(-50%);
+}
+
+.field div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.field  .Middle {
+    position: relative;
+    top: -20px;
+}
+
+.field button {
+    background: rgb(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    transition: 0.8s;
+}
+
+.field button:hover {
+    box-shadow: 0px 0px 30px 8px green;
+    background: rgb(0, 0, 0, 0.2);
+}
+
+.RigthSide {
+    overflow: scroll;
+    scrollbar-color: white black;
+    scrollbar-width: thin;
+    visibility: visible;
+}
+
+.player {
+    margin-top: 10vh;
+}
+
+.player .player-cart {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    width: 170px;
+    border: 2px rgb(255, 255, 255, 0.3) solid;
+    border-radius: 16px;
+    padding: 5px;
+    background: rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    visibility: visible;
+}
+
+.player .player-cart .player-NEL {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player .player-cart .player-img img{
+    width: 70px;
+    border-radius: 50%;
+}
+
+.player .player-cart .player-img div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.player .player-cart .player-img div img {
+    width: 30px;
+    height: 30px;
+}
+
+h5 {
+    margin-bottom: 20px;
+}
+
+#addPlyerInto {
+    background: gray;
+    border: none;
+    border-radius: 8px;
+    padding: 3px;
+    margin-top: 5px;
+}
+
+.Chimie {
+    margin: 15px 0;
+    width: 170px;
+    border: 2px rgb(255, 255, 255, 0.3) solid;
+    border-radius: 16px;
+    padding: 5px;
+    background: rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    /* position: fixed; */
+    /* z-index: 100; */
+    /* box-shadow: 0  -30px 5px 4px black; */
+}
+/* box-shadow: 0 0 30px 5px rgb(125, 6, 6); */
+
+.Chimie-parent {
+    display: flex;
+    width: 100%;
+    margin-top: 3%;
+}
+
+
+.goUp {
+    flex-grow: var(--varGoUp);
+    background-color: rgb(222, 222, 25);
+    border-radius: 7px;
+    padding: 0 7px;
+    color: cadetblue;
+}
+
+.reste {
+    flex-grow: var(--varReste);
+}
+
+.field2 {
+    position: absolute;
+    left: 15%;
+    width: 62%;
+    height: 100dvh;
+    border: solid ;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.field2 div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#cGK {
+    visibility: hidden;
+}
+
+#cDefense-L {
+    visibility: hidden;
+}
+#cDefense-R {
+    visibility: hidden;
+}
+
+#cDefense-M {
+    visibility: hidden;
+}
+
+#cDefense-M2 {
+    visibility: hidden;
+}
+
+#cMiddle-L {
+    visibility: hidden;
+}
+#cMiddle-R {
+    visibility: hidden;
+}
+#cMiddle-M{
+    visibility: hidden;
+}
+#cAttack-L{
+    visibility: hidden;
+}
+#cAttack-R{
+    visibility: hidden;
+}
+#cAttack-M{
+    visibility: hidden;
+}
+.field2  .Middle {
+    position: relative;
+    top: -20px;
+}
+
+.field2 .imgeCss {
+    width: 141px;
+    height: 196px;
+}
+
+#cDefense-L, #cDefense-R, #cGK{
+    transform: translateY(-27%);
+}
+
+.placeAttackM {
+    /* background-image: url('../bazare/badge_total_rush.webp'); */
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:4%;
+    left: 50.5%;
+    transform: translateX(-50%);
+}
+
+.placeAttackL {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:4%;
+    left: 21.5%;
+    transform: translateX(-50%);
+}
+
+.placeAttackR {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:4%;
+    right: 11%;
+    transform: translateX(-50%);
+}
+
+.placeMiddleR {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:28%;
+    right: 11%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.placeMiddleM {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:28%;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 100;
+}
+
+.placeMiddleL {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:28%;
+    left: 21.5%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.placeDefenseL {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:50.5%;
+    left: 15.5%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.placeDefenseM {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 57%;
+    left: 39%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.placeDefenseM2 {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:57%;
+    left: 62%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.placeDefenseR {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:51%;
+    right: 5%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.GK {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top:78%;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 100;
+}
+/* 
+.GK, .placeDefenseR, .placeDefenseM2, .placeDefenseM, .placeDefenseL, .placeMiddleL, .placeMiddleM, .placeAttackR, .placeAttackL, .placeAttackM {
+    visibility: visible;
+} */
+
+.nameJoure{
+    width: fit-content;
+    text-align: center;
+    color:rgb(253, 253, 4);
+}
+
+.placeAttackM img, .placeAttackL img, .placeAttackR img, .placeMiddleR img, .placeMiddleM img, .placeMiddleL img, .placeDefenseL img, .placeDefenseM img, .placeDefenseM2 img, .placeDefenseR img, .GK img {
+    width: 65%;
+    margin-bottom: 5px;
+}
+
+.LevelJoure{
+    text-align: center;
+    font-size: 70%;
+    color: rgb(200, 240, 140);
+}
+
+.posi {
+    position: absolute;
+    left: -10%;
+    top: 12px;
+}
+
+.LG {
+    position: absolute;
+    left: -10%;
+    top: 25px;
+}
+
+.AllPlyerBehinde {
+    margin-top: 1%;
+    position: absolute;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.navbar input{
+    outline: none;
+    padding: 7px 20px;
+    color: black;
+    border-radius: 16px;
+}
+
+.searchItem i{
+    color: gray;
+    position: absolute;
+    left: 38%;
+    transform: translateY(50%);
+}
+
+.iconNav {
+    transform: translateY(25%);
+    transform: translateX(50%);
+}
+
+#showAll {
+    padding: 5px;
+    text-align: center;
+}
+
+.placePlyerHere {
+    margin-top: 20px;
+    width: 80%;
+    height: 80dvh;
+    background-color: firebrick;
+    overflow: auto;
+    scrollbar-color: white black;
+    scrollbar-width: thin;
+}
+
+.zonPlyer {
+    width: 100%;
+    margin: 1%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.imNm img{
+    width: 80px;
+}
